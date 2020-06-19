@@ -1,2 +1,2 @@
-FROM tomcat:latest
-COPY target/*.war /usr/local/tomcat/webapps/practiceweb.war
+FROM tomcat:9.0.36
+COPY target/*.war /usr/local/tomcat/webapps/practicewebapp.war
