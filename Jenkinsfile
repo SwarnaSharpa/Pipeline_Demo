@@ -1,6 +1,6 @@
 node{
     stage ('Git Checkout'){
-        git credentialsId: 'git-creds', url: 'https://github.com/SwarnaSharpa/Pipeline_Demo/'
+	git 'https://github.com/SwarnaSharpa/Pipeline_Demo'
     }
     stage ('Maven Build'){
     	sh 'mvn clean package'
