@@ -2,10 +2,10 @@
 Cloud used - AWS
 
 Prerequisites - 
-1. Jenkins Instance 
+1. Jenkins Instance : 
 Packages installed - Java, Jenkins, Docker
 
-2. Web Server Instance 
+2. Web Server Instance :
 Packages installed - Docker  
 
  Steps - 
