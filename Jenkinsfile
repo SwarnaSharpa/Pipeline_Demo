@@ -9,7 +9,7 @@ node{
 		sh 'docker build -t swarnadocker/practice_webapp:1.0.1 .'
 	}
 	stage ('Push Docker Image'){
-		withCredentials([string(credentialsId: 'docker-hub-pwd-1', variable: 'dockerhubpwd')]) {
+		withCredentials([string(credentialsId: 'docker-hub-pwd', variable: 'dockerhubpwd')]) {
         sh "docker login -u swarnadocker -p ${dockerhubpwd}"
         } 
 		sh 'docker push swarnadocker/practice_webapp:1.0.1'
