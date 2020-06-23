@@ -10,7 +10,7 @@ Packages installed - Docker
 
  Steps - 
 
-1. Open the url of the Jenkins server using <Jenkins Instance IP Address>:8080
+1. Open the url of the Jenkins server using {Jenkins Instance IP Address}:8080
 2. Create a pipeline job and make it parametized, name the parameter as "WebServer" and provide the default value as the web server instance's ip address.
 3. Scroll down to the Pipeline section and select Definition combo box as "Pipeline script"
 and copy the contents of Jenkinsfile inside the Script section.
@@ -19,7 +19,7 @@ and copy the contents of Jenkinsfile inside the Script section.
 a) docker-hub-pwd
 b) ubuntukey
 
-To configure above go to : http://<Jenkins Instance IP Address>:8080/credentials/store/system/domain/_/newCredentials
+To configure above go to : http://{Jenkins Instance IP Address}:8080/credentials/store/system/domain/_/newCredentials
 
 Now to create credential "docker-hub-pwd", select the "Kind" combo box as "Secret text" and provide your docker login password in the "Secret" field, provide the ID and description as "docker-hub-pwd" and save it.
 
@@ -31,5 +31,5 @@ That's it, we are done with the crendentials.
 
 6. Run the pipeline job and verify that the WebServer parameter is displaying the correct ip address, hit build button.
 
-7. If everything goes well, you can check your webapp running on the mentioned ip address of the web server. Verify the same using the url - http://<Web Server Instance IP Address>:8080/practicewebapp/
+7. If everything goes well, you can check your webapp running on the mentioned ip address of the web server. Verify the same using the url - http://{Web Server Instance IP Address}:8080/practicewebapp/
 
