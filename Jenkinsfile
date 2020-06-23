@@ -24,7 +24,7 @@ node{
         fi'''
 		def dockerRun = 'docker run -p 8080:8080 -d --name practice_webapp swarnadocker/practice_webapp:4.0.0'
 		sshagent(credentials: ['ubuntukey']) {
-      			sh "ssh -o StrictHostKeyChecking=no ubuntu@3.15.185.75 ${dockerRun} "		
+      			sh "ssh -o StrictHostKeyChecking=no ubuntu@$WebServer ${dockerRun} "		
 		}	        
 	}
 }
