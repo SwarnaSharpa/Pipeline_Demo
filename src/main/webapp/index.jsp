@@ -8,6 +8,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>This is a practice webapp!</h1>
+        <h2> Life is short| Live it to the fullest </h2>
     </body>
 </html>
