@@ -25,7 +25,7 @@ Now to create credential "docker-hub-pwd", select the "Kind" combo box as "Secre
 
 To configure "ubuntukey", select the "Kind" combo box as "SSH Username with private key" and copy paste the content of pem file to login to the web server instance in the "Private Key" section by selecting the "Enter directly" radio button. Fill the ID and description as "ubuntukey" and provide the user name of the web server inside "Username" field(if you are using the ubuntu instance from AWS then username will be 'ubuntu'), save the credentials. 
 
-That's it, we are done with the crendentials.
+That's it, we are done with the credentials.
 
 5. Have a look on the script which we have copied from the Jenkinsfile and replace 'swarnadocker' with your docker user name. Rest all will be the same. Save the job with updated script.
 
