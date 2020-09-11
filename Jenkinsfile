@@ -5,16 +5,16 @@ node{
     stage ('Maven Build'){
     	sh 'mvn clean package'
 	}
-	stage ('Build Docker Image'){
+    stage ('Build Docker Image'){
 		sh 'docker build -t swarnadocker/practice_webapp:1.0.1 .'
 	}
-	stage ('Push Docker Image'){
+    stage ('Push Docker Image'){
 		withCredentials([string(credentialsId: 'docker-hub-pwd', variable: 'dockerhubpwd')]) {
         sh "docker login -u swarnadocker -p ${dockerhubpwd}"
         } 
 		sh 'docker push swarnadocker/practice_webapp:1.0.1'
 	}
-	stage ('Run Image To Another Web Server'){
+    stage ('Run Image To Another Web Server'){
 	    sh label: '', script: '''if [ ! "$(docker ps -q -f name=practice_webapp)" ]; then
         if [ "$(docker ps -aq -f status=exited -f name=practice_webapp)" ]; then
         # cleanup
